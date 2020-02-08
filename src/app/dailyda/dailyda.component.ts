@@ -14,7 +14,8 @@ export class DailydaComponent implements OnInit {
   ngOnInit() {
     this.weatherdataService.getWeather().subscribe((data)=>{
       console.log(data);
-      this.weather = data['main']; //or ['main']???
-  }
+      this.weather = data; //or ['main']??? But no, I think it's right
+    }
+    )};
 
-}
+};
