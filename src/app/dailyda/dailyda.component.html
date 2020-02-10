@@ -1,4 +1,7 @@
-<div *ngFor="let data of weather">
-    <h2>{{data.main[0].temp}}</h2>
-    <p>{{data.main[0].pressure}}</p>
+<div *ngIf = "weather"> <!-- *ngIf prevents errors, because of the 
+delay in retrieving JSON from the API. Once weather has a value, this 
+div is displayed.-->
+    <p>Temp in Kelvins: {{ temp }}</p> 
+    <p>Static Atmos. Pressure in hectopascals: {{ press }}</p>
+    <p> Density Altitude (assumes dry air): {{dry_da}} </p>
 </div>
