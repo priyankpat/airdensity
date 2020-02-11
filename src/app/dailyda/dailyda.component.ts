@@ -8,8 +8,8 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class DailydaComponent implements OnInit {
   weather;
-  temp;
-  press;
+  temp = this.weather.main.temp;
+  press = this.weather.main.temp;
   //Crunch your numbers here, store it in a variable called result, etc.,
   //And in the template, {{ result }} will display that number.
   ISAT = 288.15;
@@ -28,8 +28,6 @@ export class DailydaComponent implements OnInit {
     this.weatherdataService.getWeather().subscribe((data)=>{
       console.log(data);
       this.weather = data; //or ['main']??? But no, I think it's right
-      this.temp = data.main.temp;
-      this.press = data.main.pressure;
     }
     )};
 
