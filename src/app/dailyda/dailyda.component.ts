@@ -31,7 +31,7 @@ export class DailydaComponent implements OnInit {
       this.temp = this.weather.main.temp;
       this.press = this.weather.main.pressure;
       console.log(this.ISAT/0.0065 *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT))** (this.expon)))
-      this.dry_da = 3.28084 * this.ISAT/0.0065 *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT))** (this.expon))
+      this.dry_da = Math.round(3.28084 * this.ISAT/0.0065 *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT))** (this.expon)))
     }
     )};
 
