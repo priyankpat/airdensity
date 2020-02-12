@@ -8,8 +8,8 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 })
 export class DailydaComponent implements OnInit {
   weather;
-  temp = this.weather.main.temp;
-  press = this.weather.main.temp;
+  temp;
+  press;
   //Crunch your numbers here, store it in a variable called result, etc.,
   //And in the template, {{ result }} will display that number.
   ISAT = 288.15;
@@ -18,7 +18,7 @@ export class DailydaComponent implements OnInit {
   R = 8.3144598;
   g = 9.80665;
   M = 0.028964; // This is the molar mass of DRY air.
-  dry_da = this.ISAT/this.temp *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT)) ** ((this.lapse_rate*this.R)/(this.g*this.M - this.lapse_rate*this.R)))
+  dry_da = this.ISAT/this.temp *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT))** ((this.lapse_rate*this.R)/(this.g*this.M - this.lapse_rate*this.R)))
 
 
 
@@ -28,6 +28,9 @@ export class DailydaComponent implements OnInit {
     this.weatherdataService.getWeather().subscribe((data)=>{
       console.log(data);
       this.weather = data; //or ['main']??? But no, I think it's right
+      this.temp = this.weather.main.temp;
+      this.press = this.weather.main.pressure;
+      console.log(this.ISAT/this.temp *(1 - ((this.press/this.ISAP)/(this.temp/this.ISAT))** ((this.lapse_rate*this.R)/(this.g*this.M - this.lapse_rate*this.R))))
     }
     )};
 
