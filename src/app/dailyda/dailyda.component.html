@@ -1,3 +1,13 @@
+<form formGroup="zipForm">
+    <label>
+        Zip Code:
+        <input type="text" [formControl]='zipCode'>
+    </label>
+    <button type="button" (click)="onSubmit()">Submit</button>
+</form>
+<div *ngIf = 'zipForm'>
+    <p>Current Zip: {{ zipCode.value }}</p>
+</div>
 <div *ngIf = "weather"> <!-- *ngIf prevents errors, because of the 
 delay in retrieving JSON from the API. Once weather has a value, this 
 div is displayed.-->

@@ -9,8 +9,10 @@ export class WeatherdataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getWeather(){
-    return this.httpClient.get(`https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=${this.API_KEY}`);
+  public getWeather(zipcode){ // getWeather(zipcode)
+    return this.httpClient.get(
+`https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${this.API_KEY}` 
+);  // where to format with zip code
   }
 }
 
