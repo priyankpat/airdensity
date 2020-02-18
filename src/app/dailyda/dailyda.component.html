@@ -1,6 +1,7 @@
 <div *ngIf = "weather"> <!-- *ngIf prevents errors, because of the 
 delay in retrieving JSON from the API. Once weather has a value, this 
 div is displayed.-->
+    <h1>Chicago Weather</h1>
     <h4> Density Altitude (assumes dry air): </h4>
     <h2><strong>{{ dry_da }} ft</strong></h2>
     <h4> Temp in Kelvins: </h4>
@@ -8,3 +9,5 @@ div is displayed.-->
     <h4> Static Atmospheric Pressure in hPa: </h4>
     <h2><strong>{{ press }}</strong></h2>
 </div>
+
+<button class="btn btn-success"></button>
