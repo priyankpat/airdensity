@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="weather-card col-xs-8 offset-xs-2 col-sm-8 offset-sm-2 
+text-center"> <!-- *ngIf prevents errors, because of the 
+    delay in retrieving JSON from the API. Once weather has a value, this 
+    div is displayed.-->
+        <h1>Why Density Altitude?</h1>
+        <p class="text-muted">This video will give you a good idea of the dangers
+this app seeks to mitigate.
+        </p>
+        <div class="cont">
+            <iframe class="video"
+            src="https://www.youtube.com/embed/2l0enyg0Xi0" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+            picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>I'd like to explain the purpose of this app to developers, which is
+readily apparent to skydivers, but probably not to those in the tech industry.
+        </p>
+        <p>Obviously, many skydivers are adrenaline junkies. A skydive lasts
+about 4 minutes, costs $25, and as such, skydivers want to squeeze all the fun
+they can out of it.
+        </p>
+        <p>In our first jumps, we're advised not to make low turns, as this 
+causes the parachute to dive at the ground... But the experts know that the 
+<strong>perfect</strong> low turn generates lots of speed for the landing,
+resulting in a surf across the grass that can't be explained with words.
+        </p>
+        <p>Of course... this can go <span style="color:red; font-weight: bold">
+terribly wrong</span>. The parachute must come out of the dive at the right 
+moment, or you can hit the ground with <span style="color:red; font-weight: bold">
+lethal force</span>.
+        </p>
+        <p>This app provides a metric, Density Altitude, which represents how
+thick or thin the air is. As the air density <span style="font-weight: bold;">
+changes from day to day and even throughout the day</span>, the same dive can 
+recover too quickly... or too late, resulting in injury or death.
+        </p>
+        <p>By making this metric accessible, skydivers are better informed to 
+make these high performance landings in a more calculated way, without relying
+too much on feel.
+        </p>
+        <h1>How the App works</h1>
+        <p>This app was built with Angular JS. It makes an API call, takes
+data from the JSON, stores those in variables, and crunches the numbers in a
+formula to get Density Altitude. The DOM is modified by Angular directives, 
+and the results come out on the home page. The numbers update by the minute,
+providing up to date data (many aviation data sources update every 4-6 hours).
+I believe this app is the best, one-tap result available to skydivers today.
+        </p>
+    </div>
+</div>

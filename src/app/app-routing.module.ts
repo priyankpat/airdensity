@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DailydaComponent } from './dailyda/dailyda.component';
 import { CautionComponent } from './caution/caution.component';
+import { DevelopersComponent } from './developers/developers.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path:'readfirst', component:CautionComponent
+  },
+  {
+    path:'developers', component:DevelopersComponent
   }
 ];
 

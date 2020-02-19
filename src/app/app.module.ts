@@ -7,13 +7,15 @@ import { CautionComponent } from './caution/caution.component';
 import { SharedModule } from './shared/shared.module';
 import { DailydaComponent } from './dailyda/dailyda.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DevelopersComponent } from './developers/developers.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CautionComponent,
-    DailydaComponent
+    DailydaComponent,
+    DevelopersComponent
   ],
   imports: [
     BrowserModule,
