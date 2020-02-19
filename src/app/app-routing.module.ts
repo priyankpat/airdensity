@@ -7,16 +7,16 @@ import { DevelopersComponent } from './developers/developers.component';
 
 const routes: Routes = [
   {
-    path:'', component: DailydaComponent
+    path: '', component: DailydaComponent
   },
   {
-    path:'dailyda', component:DailydaComponent
+    path: 'dailyda', component: DailydaComponent
   },
   {
-    path:'readfirst', component:CautionComponent
+    path: 'readfirst', component: CautionComponent
   },
   {
-    path:'developers', component:DevelopersComponent
+    path: 'developers', component: DevelopersComponent
   }
 ];
 
